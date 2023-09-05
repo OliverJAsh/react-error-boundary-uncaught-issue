@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 
 window.addEventListener('error', (event) => {
     console.log('window.addEventListener error', event);
@@ -43,7 +43,7 @@ const App = () => {
 
 const rootEl = document.getElementById('root');
 
-ReactDOM.render(<App />, rootEl);
+ReactDOM.createRoot(rootEl).render(<App />);
 
 setTimeout(() => {
     throw new Error('Error outside of React render');
