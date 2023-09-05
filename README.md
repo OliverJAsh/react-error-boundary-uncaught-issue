@@ -3,9 +3,9 @@
 ```bash
 yarn
 
-webpack --config config/webpack.config.js --mode development
+yarn run webpack --config config/webpack.config.js --mode development
 # or
-webpack --config config/webpack.config.js --mode production
+yarn run webpack --config config/webpack.config.js --mode production
 
-http-server -c-1 ./target/
+yarn run http-server -c-1 ./target/
 ```
