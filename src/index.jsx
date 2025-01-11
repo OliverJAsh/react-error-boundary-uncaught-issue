@@ -1,10 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 
-window.addEventListener('error', (event) => {
-    console.log('window.addEventListener error', event);
-});
-
 class ErrorBoundary extends React.Component {
     state = { hasError: false };
 
@@ -43,8 +39,6 @@ const App = () => {
 
 const rootEl = document.getElementById('root');
 
-ReactDOM.createRoot(rootEl).render(<App />);
-
 setTimeout(() => {
-    throw new Error('Error outside of React render');
-}, 5000);
+    ReactDOM.createRoot(rootEl).render(<App />);
+}, 100);
